@@ -1,19 +1,24 @@
 <template>
-  <div class="container">
+  <section>
     <header>
-      <nav>
-        <ul>
-          <li>
-            <NuxtLink to="/" class="nav-link">Wordlone</NuxtLink>
-          </li>
-        </ul>
-      </nav>
+      <NuxtLink to="/" class="text-6xl font-bold text-gray-800">Wordlone</NuxtLink>
     </header>
-    <main>
+    <main class="my-6">
       <NuxtPage />
     </main>
     <footer>
-      Made with <span class="heart">❤</span>
+      Made with <span class="heart">❤</span> and <span class="coffee">☕</span> and a sprinkle of <span
+        class="text-green-500">Nuxt</span>
     </footer>
-  </div>
+  </section>
 </template>
+
+<style lang="postcss" scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+</style>

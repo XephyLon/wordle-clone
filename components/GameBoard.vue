@@ -1,8 +1,8 @@
 <template>
     <article>
         <ul>
-            <li v-for="[guess, hint] in state">
-                <span v-for="(letter, i) in guess" :class="hintMap[hint[i]]">{{ letter }}</span>
+            <li class="flex gap-3 my-3" v-for="[guess, hint] in state">
+                <Letter v-for="(letter, i) in guess" :color-state="hint[i]">{{ letter }}</Letter>
             </li>
         </ul>
     </article>
@@ -12,20 +12,4 @@
     defineProps({
         state: Array as () => GameState
     })
-
-    const hintMap = {
-        0: '',
-        1: 'yellow',
-        2: 'green',
-    }
 </script>
-
-<style>
-    .yellow {
-        color: yellow;
-    }
-
-    .green {
-        color: green;
-    }
-</style>

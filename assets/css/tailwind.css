@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    button {
+        @apply bg-white text-gray-900 border-gray-900 border rounded p-4 px-8;
+        @apply hover:bg-gray-900 hover:text-white transition-all duration-150 ease-in;
+    }
+}

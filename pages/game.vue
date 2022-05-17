@@ -9,3 +9,9 @@
 <script setup lang="ts">
     const { state, submitGuess } = useGameState()
 </script>
+
+<style lang="postcss" scoped>
+    h1 {
+        @apply text-2xl
+    }
+</style>
